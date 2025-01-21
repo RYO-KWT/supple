@@ -15,8 +15,7 @@ component > _mv.scss
 }
 
 .c-mv__inner {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   align-items: center;
 }
 

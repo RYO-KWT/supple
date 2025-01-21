@@ -1,0 +1,27 @@
+@use "../global" as g;
+
+/*!
+component > _instagram.scss
+--------------------------------
+*/
+
+.c-instagram {
+  background: var(--color-bg-accent);
+}
+
+.c-instagram__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 9px;
+  width: min(100%, 1366px);
+  margin-inline: auto;
+}
+
+.c-instagram__list--col3 {
+  @include g.media(md) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @include g.media(lg) {
+    gap: 32px;
+  }
+}

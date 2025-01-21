@@ -1,0 +1,46 @@
+@use "../../global" as g;
+
+/*!
+page > shop > _shop.scss
+--------------------------------
+*/
+
+.shop__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+  @include g.media(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 5%;
+  }
+}
+
+.shop__item {
+  display: grid;
+  gap: 16px;
+  @include g.media(xl) {
+    grid-template-columns: 285px 1fr;
+    gap: 24px;
+  }
+}
+
+.shop__desc {
+  display: grid;
+  row-gap: 4px;
+  line-height: 1.55;
+}
+
+.shop__title {
+  font-size: clamp(1rem, 0.911rem + 0.4vw, 1.25rem);
+  font-weight: 400;
+}
+
+.shop__text {
+  font-size: clamp(0.75rem, 0.705rem + 0.2vw, 0.875rem);
+}
+
+.shop__tel {
+  font-family: var(--font-family-en);
+  font-size: clamp(1.125rem, 1.036rem + 0.4vw, 1.375rem);
+  text-transform: uppercase;
+}

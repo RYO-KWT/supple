@@ -1,0 +1,30 @@
+@use "../../global" as g;
+
+/*!
+page > concept > _concept-mv.scss
+--------------------------------
+*/
+
+.concept__image {
+  aspect-ratio: 324/80;
+  @include g.media(md) {
+    aspect-ratio: inherit;
+    height: 270px;
+  }
+}
+
+.concept__image img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.concept__inner {
+  text-align: center;
+}
+
+.concept__text {
+  margin-block-start: 24px;
+  @include g.media(md) {
+    margin-block-start: 32px;
+  }
+}

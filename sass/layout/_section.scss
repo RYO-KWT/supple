@@ -1,0 +1,13 @@
+@use "../global" as g;
+
+/*!
+layout > _section.scss
+--------------------------------
+*/
+
+.l-section {
+  padding-block: 64px;
+  @include g.media(md) {
+    padding-block: 80px;
+  }
+}

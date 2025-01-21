@@ -1,0 +1,119 @@
+@use "../global" as g;
+
+/*!
+layout > _header.scss
+--------------------------------
+*/
+
+.header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-block-start: 16px;
+  @include g.media(md) {
+    padding-block: 16px;
+  }
+}
+
+.header__inner .c-logo {
+  margin-inline: 5% auto;
+}
+
+.header__button {
+  display: grid;
+  place-items: center;
+  width: min(100%, 170px);
+  height: 45px;
+  font-family: var(--font-family-en);
+  font-size: clamp(0.75rem, 0.661rem + 0.4vw, 1rem);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--color-bg-main);
+  color: var(--color-font-button-light);
+  @include g.media(md) {
+    order: 1;
+    margin-inline-start: 8px;
+    transition: filter 0.3s;
+  }
+  @include g.media(lg) {
+    margin-inline-start: 16px;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      filter: brightness(90%) contrast(120%);
+    }
+  }
+}
+
+.nav {
+  width: 100%;
+  margin-block-start: 16px;
+  padding-inline: 5%;
+  background: var(--color-bg-main);
+  @include g.media(md) {
+    width: auto;
+    margin-block-start: 0;
+    padding-inline: 0;
+    background: inherit;
+  }
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  @include g.media(md) {
+    height: auto;
+    overflow-x: visible;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.nav__item {
+  font-family: var(--font-family-en);
+  font-size: clamp(0.75rem, 0.705rem + 0.2vw, 0.875rem);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-font-light);
+  @include g.media(md) {
+    color: inherit;
+  }
+}
+
+.nav__item:first-child {
+  padding-inline-end: 16px;
+  @include g.media(md) {
+    padding-inline: 8px;
+  }
+  @include g.media(lg) {
+    padding-inline: 16px;
+  }
+}
+
+.nav__item:not(:first-child) {
+  padding-inline: 16px;
+  border-left: 1px solid var(--color-bg-border-light);
+  @include g.media(md) {
+    border-left: none;
+    padding-inline: 8px;
+  }
+  @include g.media(lg) {
+    padding-inline: 16px;
+  }
+}
+
+.nav__link {
+  display: block;
+  transition: opacity 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

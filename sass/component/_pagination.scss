@@ -1,0 +1,55 @@
+@use "../global" as g;
+
+/*!
+component > _pagination.scss
+--------------------------------
+*/
+
+.c-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 40px;
+  gap: 8px;
+  @include g.media(md) {
+    margin-block-start: 48px;
+  }
+}
+
+.c-pagination__link {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  aspect-ratio: 1;
+  line-height: 1;
+  border: 1px solid var(--color-bg-border-dark);
+  background: var(--color-bg-base);
+  @include g.media(md) {
+    width: 40px;
+  }
+}
+
+.c-pagination__link--active {
+  background: var(--color-bg-dark);
+  color: var(--color-font-light);
+}
+
+.c-pagination__link--dot {
+  border: none;
+}
+
+.c-pagination__link--arrow {
+  position: relative;
+  &::before {
+    content: "";
+    width: 8px;
+    aspect-ratio: 1;
+    border-left: 1px solid var(--color-bg-border-dark);
+    border-bottom: 1px solid var(--color-bg-border-dark);
+    rotate: 45deg;
+  }
+}
+
+.c-pagination__item--next {
+  rotate: 180deg;
+}

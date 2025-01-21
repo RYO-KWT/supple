@@ -1,0 +1,63 @@
+@use "../../global" as g;
+
+/*!
+page > menu > _menu-mv.scss
+--------------------------------
+*/
+
+.menu__inner {
+  margin-block-start: 40px;
+  @include g.media(md) {
+    margin-block-start: 48px;
+  }
+}
+
+.menu__heading {
+  font-size: clamp(1rem, 0.911rem + 0.4vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.menu__sub-heading {
+  margin-block-start: 24px;
+  text-align: center;
+}
+
+.menu__list {
+  display: grid;
+  gap: 40px;
+  @include g.media(md) {
+    gap: 48px;
+  }
+}
+
+.menu__item {
+  display: grid;
+  gap: 16px;
+  @include g.media(md) {
+    grid-template-columns: 280px 1fr;
+    align-items: center;
+    gap: 48px;
+  }
+}
+
+.menu__title {
+  font-size: clamp(1rem, 0.911rem + 0.4vw, 1.25rem);
+}
+
+.menu__price {
+  margin-block-start: 12px;
+  font-size: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);
+  line-height: 1;
+  @include g.media(md) {
+    margin-block-start: 16px;
+  }
+}
+
+.menu__text {
+  margin-block-start: 12px;
+  @include g.media(md) {
+    margin-block-start: 16px;
+  }
+}

@@ -1,0 +1,18 @@
+@use "../../global" as g;
+
+/*!
+page > top > _bg-separate.scss
+--------------------------------
+*/
+
+.top-bg-separate {
+  overflow: hidden;
+  @include g.media(md) {
+    max-height: 370px;
+  }
+}
+
+.top-bg-separate__image img {
+  object-fit: cover;
+  height: 100%;
+}

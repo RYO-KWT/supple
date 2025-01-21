@@ -1,0 +1,13 @@
+@use "../global" as g;
+
+/*!
+component > _concept-text.scss
+--------------------------------
+*/
+
+.c-concept__text {
+  margin-block-start: 24px;
+  @include g.media(md) {
+    margin-block-start: 32px;
+  }
+}

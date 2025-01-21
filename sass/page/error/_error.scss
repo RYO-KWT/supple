@@ -1,0 +1,17 @@
+@use "../../global" as g;
+
+/*!
+page > error > _error.scss
+--------------------------------
+*/
+
+.error__text {
+  text-align: center;
+}
+
+.error__button {
+  margin-block-start: 40px;
+  @include g.media(md) {
+    margin-block-start: 48px;
+  }
+}

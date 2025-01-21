@@ -1,0 +1,10 @@
+/*!
+global > _content-width.scss
+--------------------------------
+*/
+
+:root {
+  --content-width-sm: min(90%, 960px);
+  --content-width-md: min(90%, 1080px);
+  --content-width-lg: min(90%, 1200px);
+}

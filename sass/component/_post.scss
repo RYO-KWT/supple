@@ -1,0 +1,45 @@
+@use "../global" as g;
+
+/*!
+component > _post.scss
+--------------------------------
+*/
+
+.c-post__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px 30px;
+}
+
+.c-post__list--col3 {
+  @include g.media(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include g.media(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 30px;
+  }
+}
+
+.c-post__date {
+  margin-block-start: 20px;
+}
+
+.c-post__time {
+  display: block;
+  font-family: var(--font-family-en);
+  font-size: clamp(0.75rem, 0.705rem + 0.2vw, 0.875rem);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--color-font-main);
+}
+
+.c-post__title {
+  margin-block-start: 8px;
+  font-size: clamp(1.125rem, 1.036rem + 0.4vw, 1.375rem);
+  line-height: 1.55;
+}
+
+.c-post__title-link {
+  display: block;
+}

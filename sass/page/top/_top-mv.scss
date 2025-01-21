@@ -1,0 +1,18 @@
+@use "../../global" as g;
+
+/*!
+page > top > _top-mv.scss
+--------------------------------
+*/
+
+.top-mv {
+  overflow: hidden;
+  @include g.media(md) {
+    max-height: 685px;
+  }
+}
+
+.top-mv__image img {
+  object-fit: cover;
+  height: 100%;
+}

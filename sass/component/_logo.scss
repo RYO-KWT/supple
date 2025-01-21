@@ -1,0 +1,13 @@
+@use "../global" as g;
+
+/*!
+component > _logo.scss
+--------------------------------
+*/
+
+.c-logo {
+  width: min(100%, 120px);
+  @include g.media(md) {
+    width: min(100%, 200px);
+  }
+}

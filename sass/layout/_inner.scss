@@ -1,0 +1,13 @@
+@use "../global" as g;
+
+/*!
+layout > _inner.scss
+--------------------------------
+*/
+
+.l-inner {
+  padding-block: 40px;
+  @include g.media(md) {
+    padding-block: 48px;
+  }
+}

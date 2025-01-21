@@ -1,0 +1,38 @@
+@use "../global" as g;
+
+/*!
+component > _mv.scss
+--------------------------------
+*/
+
+.c-mv {
+  position: relative;
+  display: grid;
+  align-items: center;
+  aspect-ratio: 360/180;
+  @include g.media(md) {
+    aspect-ratio: inherit;
+    height: 460px;
+  }
+}
+
+.c-mv__image {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-index-bg);
+}
+
+.c-mv__image img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+
+.c-mv__title {
+  font-family: var(--font-family-en);
+  font-size: clamp(1.625rem, 1.401rem + 0.99vw, 2.25rem);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-font-light);
+}

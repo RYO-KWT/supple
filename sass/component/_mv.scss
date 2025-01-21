@@ -8,6 +8,7 @@ component > _mv.scss
 .c-mv {
   position: relative;
   display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
   aspect-ratio: 360/180;
   @include g.media(md) {
